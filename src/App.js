@@ -6,7 +6,6 @@ import Managers from '../src/components/Managers';
 import Team from '../src/components/Team';
 
 
-
 function App() {
   return (
     <Routes>
