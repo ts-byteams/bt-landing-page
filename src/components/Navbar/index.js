@@ -1,13 +1,102 @@
 import React from "react";
+import { Fragment, useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { ArrowRightEndOnRectangleIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+//import LogoW from '../assets/images/ByTeams_Logo_W.png'
+import LogoB from '../assets/images/ByTeams_Logo_B.png';
 
+const navigation = [
+    { name: 'Product', href: '#' },
+    { name: 'Features', href: '#' },
+    { name: 'Resources', href: '#' },
+    { name: 'Company', href: '#' },
+]
+ 
 const Navbar = () => {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
     return (
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a href="#" class="text-base mr-5 hover:text-gray-900">Home</a>
-                <a href="#" class="text-base mr-5 hover:text-gray-900">Contact Us</a>
-            </nav>
-        </div>
+        <header className="absolute inset-x-0 top-0 z-50">
+        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+          <div className="flex lg:flex-1">
+            <a href="/" className="-m-1.5 p-1.5">
+              <img
+                className="h-9 w-auto rounded-md"
+                src={LogoB}
+                alt="ByTeams Logo"
+              />
+            </a>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <ArrowRightEndOnRectangleIcon className="h-6 w-6" aria-hidden="true" />
+            <a href="#" className="text-sm font-semibold leading-6 text-gray-900 inline-flex">
+              Log in
+            </a>
+          </div>
+        </nav>
+        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+          <div className="fixed inset-0 z-50" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <a href="#" className="-m-1.5 p-1.5">
+                <img
+                  className="h-9 w-auto rounded-md"
+                  src={LogoB}
+                  alt="ByTeams Logo"
+                />
+              </a>
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="py-6">
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log in <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </Dialog.Panel>
+        </Dialog>
+      </header>
     )
 }
 
