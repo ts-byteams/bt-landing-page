@@ -1,22 +1,22 @@
 import React from "react";
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { ArrowRightEndOnRectangleIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 //import LogoW from '../assets/images/ByTeams_Logo_W.png'
 import LogoB from '../assets/images/ByTeams_Logo_B.png';
 
 const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Resources', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Placeholder', href: '#' },
+    { name: 'Placeholder', href: '#' },
+    { name: 'Placeholder', href: '#' },
+    { name: 'Placeholder', href: '#' },
 ]
  
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
+        <header className="absolute inset-x-0 top-0 z-50 shadow-lg">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
+              <a key={item.name} href={item.href} className="text-md font-semibold leading-6 text-gray-900 hover:text-zinc-600">
                 {item.name}
               </a>
             ))}
@@ -55,7 +55,7 @@ const Navbar = () => {
           <div className="fixed inset-0 z-50" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a href="/" className="-m-1.5 p-1.5">
                 <img
                   className="h-9 w-auto rounded-md"
                   src={LogoB}

@@ -2,7 +2,7 @@ import React from "react";
 import { CubeTransparentIcon } from '@heroicons/react/20/solid';
 import LogoB from '../assets/images/ByTeams_Logo_B.png';
 
-const Engineers = () => {
+const TeamMembers = () => {
     return (
         <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
         <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -11,7 +11,7 @@ const Engineers = () => {
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
               <div className="lg:max-w-lg">
-                <p className="text-base font-semibold leading-7 text-zinc-500">Engineers</p>
+                <p className="text-base font-semibold leading-7 text-zinc-500">Team Members</p>
                 <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Header 1</h1>
                 <p className="mt-6 text-xl leading-8 text-gray-700">
                   Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam
@@ -80,4 +80,4 @@ const Engineers = () => {
     )
 }
 
-export default Engineers;
+export default TeamMembers;

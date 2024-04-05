@@ -6,6 +6,7 @@ import Engineers from '../src/components/Engineers';
 import Managers from '../src/components/Managers';
 import TeamMembers from '../src/components/TeamMembers';
 import Start from './components/Start';
+import Footer from './components/Footer';
 
 function App() {
   return (
