@@ -10,7 +10,7 @@ const Home = () => {
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-7xl">
               ByTeams
             </h1>
-            <p className="mt-6 text-med leading-8 text-gray-600">
+            <p className="mt-6 text-md leading-8 text-gray-600">
               Introducing the data-driven, collaborative approach to tech team hiring.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

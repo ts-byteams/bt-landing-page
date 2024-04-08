@@ -45,8 +45,8 @@ const Navbar = () => {
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <ArrowRightEndOnRectangleIcon className="h-6 w-6" aria-hidden="true" />
             <a href="#" className="text-sm font-semibold leading-6 text-gray-900 inline-flex">
+            <ArrowRightEndOnRectangleIcon href='#' className="h-6 w-6" aria-hidden="true" />
               Log in
             </a>
           </div>
