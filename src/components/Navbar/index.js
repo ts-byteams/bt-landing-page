@@ -6,22 +6,21 @@ import { ArrowRightEndOnRectangleIcon, Bars3Icon, XMarkIcon } from '@heroicons/r
 import LogoB from '../assets/images/ByTeams_Logo_B.png';
 
 const navigation = [
-    { name: 'Placeholder', href: '#' },
-    { name: 'Placeholder', href: '#' },
-    { name: 'Placeholder', href: '#' },
-    { name: 'Placeholder', href: '#' },
+    { name: 'Managers', href: '/managers' },
+    { name: 'Engineers/HR', href: '/engineers' },
+    { name: 'Team', href: '/team' },
 ]
  
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50 shadow-lg">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div className="flex lg:flex-1">
+      <header className="fixed top-0 z-50 shadow-md bg-white rounded-xl m-2 p-1 w-2/5 inset-x-96">
+        <nav className="flex items-center justify-between p-5 lg:px-8" aria-label="Global">
+          <div className="flex justify-start lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <img
-                className="h-9 w-auto rounded-md"
+                className="h-9 w-full rounded-md"
                 src={LogoB}
                 alt="ByTeams Logo"
               />
