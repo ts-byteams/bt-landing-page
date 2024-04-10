@@ -6,9 +6,9 @@ import { ArrowRightEndOnRectangleIcon, Bars3Icon, XMarkIcon } from '@heroicons/r
 import LogoB from '../assets/images/ByTeams_Logo_B.png';
 
 const navigation = [
-    { name: 'Managers', href: '/managers' },
-    { name: 'Engineers/HR', href: '/engineers' },
-    { name: 'Team', href: '/team' },
+    { name: 'Hiring Manager', href: '/managers' },
+    { name: 'Engineers', href: '/engineers' },
+    { name: 'HR', href: '/team' },
 ]
  
 const Navbar = () => {
